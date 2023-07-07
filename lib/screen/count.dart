@@ -16,7 +16,7 @@ class _CountState extends State<Count> {
     // TODO: implement initState
     super.initState();
     final countProvider = Provider.of<CountProvider>(context, listen: false);
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
       countProvider.setCount();
     });
   }
@@ -38,7 +38,7 @@ class _CountState extends State<Count> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(DateTime.now().hour.toString()+":"+DateTime.now().minute.toString()+":"+DateTime.now().second.toString(),style: TextStyle(fontSize: 40),),
+              Text("${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second}",style: TextStyle(fontSize: 40),),
               Text(countProvider.count.toString(),
                 style: const TextStyle(fontSize: 50,color: Colors.indigo),),
             ],
@@ -49,7 +49,7 @@ class _CountState extends State<Count> {
         onPressed: () {
           countProvider.setCount();
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
