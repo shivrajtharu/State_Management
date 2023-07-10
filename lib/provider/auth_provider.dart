@@ -11,7 +11,7 @@ class AuthProvider with ChangeNotifier{
     notifyListeners();
   }
 
-  void login(String email, String password)async{
+  void login(String email, String password,)async{
 
     setLoading(true);
 

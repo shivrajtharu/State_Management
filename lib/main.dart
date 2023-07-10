@@ -12,6 +12,9 @@ import 'package:state_management/screen/favourite/favourite_screen.dart';
 import 'package:state_management/screen/slider.dart';
 import 'package:state_management/screen/value_notify_listener.dart';
 
+void main(){
+  runApp(const MyApp());
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
